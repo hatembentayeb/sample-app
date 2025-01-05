@@ -24,12 +24,11 @@ import (
 	"net/http"
 )
 
-main() {
-		http.HandleFunc("/blue", blueHandler)
-			http.HandleFunc("/red", redHandler)
-				http.ListenAndServe(":8080", nil)
-			}
-
+func main() {
+	http.HandleFunc("/blue", blueHandler)
+	http.HandleFunc("/red", redHandler)
+	http.ListenAndServe(":8080", nil)
+}
 
 
 func blueHandler(w http.ResponseWriter, r *http.Request) {
